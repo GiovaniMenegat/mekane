@@ -1,0 +1,42 @@
+.homeText {
+    max-width: 1120px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+        max-width: 38.75rem;
+    }
+    
+    img {
+        max-width: 11.62rem;
+    }
+}
+
+.homeBrands {
+    max-width: 1120px;
+    margin: 3rem auto 0;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    div {
+        margin: 20px;
+
+        img {
+            width: 224px;
+            -webkit-filter: contrast(0.5);
+            filter: contrast(0.5);
+        }
+
+        &:hover {
+            img {
+                -webkit-filter: invert(1);
+                filter: invert(1);
+            }
+        }
+    }
+}

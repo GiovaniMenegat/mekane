@@ -1,0 +1,49 @@
+{
+    "brands": [
+        {
+            "name": "Pirelli",
+            "image": "/images/logos/pirelli-logo.png",
+            "description": "Com mais de 40 anos de experiência no segmento Premium e Prestige, a Pirelli é uma empresa de pneus com um foco particular no mercado de pneus de alto valor e está constantemente engajada no desenvolvimento de produtos inovadores para atender às necessidades de mobilidade mais específicas do consumidor final como pneus Especiais e Super Especiais."
+        },
+        {
+            "name": "Bridgestone",
+            "image": "/images/logos/bridgestone-logo.png",
+            "description": "A Bridgestone é uma empresa líder mundial em desenvolvimento de tecnologias inovadoras para pneus. Nosso investimento contínuo em pesquisa e desenvolvimento favorecem o desenvolvimento de novos produtos que surpreendem o mercado em vários aspectos, seja ele na frenagem, desempenho, quilometragem, economia de combustível e também na criação de pneus mais leves e que usem menos matéria-prima, como por exemplo a tecnologia run-flat."
+        },
+        {
+            "name": "Dunlop",
+            "image": "/images/logos/dunlop-logo.png",
+            "description": "Desde sua fundação, o objetivo da Dunlop é produzir, constantemente, pneus superiores para melhorar a performance de veículos e a experiência de condução dos motoristas. Hoje, os pneus Dunlop são produzidos em doze fábricas e estão presentes em mais de 100 países, incluindo Estados Unidos, Japão, Indonésia, Tailândia, China, Turquia e Europa."
+        },
+        {
+            "name": "Michelin",
+            "image": "/images/logos/michelin-logo.png",
+            "description": "A Michelin é uma das líderes mundiais na fabricação e comercialização de pneus, serviços e experiências. São mais de 100 anos de história com inovação. O resultado desse trabalho são produtos e serviços de alta qualidade com ênfase no progresso da mobilidade de pessoas e mercadorias. Você encontra pneus MICHELIN em bicicletas, motocicletas, automóveis, ônibus, caminhões, tratores, aviões e até mesmo em naves espaciais da NASA! Dá pra acreditar? Há também grandes inovações com linhas de produtos licenciados e aclamados, como guias turísticos e gastronômicos."
+        },
+        {
+            "name": "Continental",
+            "image": "/images/logos/continental-logo.png",
+            "description": "Desde o primeiro dia, a Continental desenvolveu tecnologias-chave para uma condução segura e mais confortável. Nós inventamos o primeiro desenho da banda de rodagem de um pneu em 1904 e hoje nós produzimos tecnologia automotiva, como: câmeras de 360 graus para veículos e cruise control - na Continental, nós não somos apena pneus. Cabe a nós moldar a futura paisagem para os veículos."
+        },
+        {
+            "name": "Firestone",
+            "image": "/images/logos/firestone-logo.png",
+            "description": "Há mais de 100 anos trabalhamos para cumprir nossa missão de “Servir à Sociedade com Qualidade Superior”. Nós aspiramos oferecer o melhor para os nossos clientes, não só com nossos produtos, serviços e tecnologia, mas em todas as nossas atividades corporativas. Para nós, confiabilidade é um trabalho constante. Por isso, saímos de casa todos os dias, arregaçamos as mangas e entregamos produtos de qualidade que as pessoas podem confiar. Essa é uma das razões pelas quais a marca Firestone é uma das mais confiáveis do mundo."
+        },
+        {
+            "name": "Goodyear",
+            "image": "/images/logos/goodyear-logo.png",
+            "description": "Uma das principais marcas e líder em inovação tecnológica na indústria, a Goodyear tem estado nas estradas da América Latina por mais de um século. Atualmente, projetamos e fabricamos pneus especificamente formulados para as condições de condução no Brasil."
+        },
+        {
+            "name": "Hankook",
+            "image": "/images/logos/hankook-logo.png",
+            "description": "Liderar a indústria automobilística através de uma alta tecnologia proeminente. No âmbito do 80.º aniversário da nossa fundação em 2021, iniciamos a construção de unidades de produção em Chongqing, na China e em Bekasi, na Indonésia, fortalecendo nossa capacidade de crescimento. Além disso, os pneus Hankook foram escolhidos como os pneus oficiais da Deutsche Tourenwagen Masters (DTM) na Alemanha, a maior competição automobilística do mundo e a Hankook Tire iniciou os preparativos para outro centro de pesquisa com equipamentos de tecnologia avançada em 2014."
+        },
+        {
+            "name": "BFGoodrich",
+            "image": "/images/logos/bfgoodrich-logo.png",
+            "description": "Os pneus BFGoodrich são feitos por entusiastas e para entusiastas… Qualquer pessoa que viva com espírito de aventura sente que precisa de um tempo on-road ou off-road para apreciar cada momento de liberdade. Nossos pneus são projetados e fabricados por verdadeiros entusiastas, que passam os fins de semana em estradas montanhosas ou as curvas das pistas de corrida. Nos esforçamos para melhorar continuamente o desempenho dos pneus porque queremos o mesmo que você: mais controle, mais firmeza e mais prazer ao volante. O amor pela direção há muito tempo é uma fonte de inspiração na BFGoodrich, e nossos revendedores de pneus estão sempre à disposição para prestar orientações e assistência especializadas."
+        }
+    ]
+}

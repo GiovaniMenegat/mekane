@@ -1,0 +1,72 @@
+.contactTitle {
+    background-image: url("/images/background-contato.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 17.81rem;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    
+    position: relative;
+
+    h1 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        color: var(--white);
+        font-size: 6rem;
+        text-shadow: 0 0 20px black;
+    }
+}
+
+.contactForm {
+    max-width: 43.75rem;
+    margin: 6rem auto;
+    
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    label {
+        margin: 0.6rem 0;
+    }
+    input, textarea {
+        padding: 1rem;
+        border-radius: 0.375rem;
+        outline: none;
+        border: 1px solid var(--green-800);
+
+        &:focus {
+            border: 1px solid var(--yellow-100);
+        }
+    }
+
+    button {
+        margin-top: 2rem;
+        padding: 1rem;
+        border: 2px solid var(--green-800);
+        background: transparent;
+        border-radius: 6px;
+
+        transition: 0.2s background;
+
+        &:hover {
+            background: var(--green-800);
+            color: var(--white);
+        }
+    }
+    
+}
+
+.contactMap {
+    iframe {
+        display: block;
+        margin: 0 auto;
+    }
+}

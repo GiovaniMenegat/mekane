@@ -1,0 +1,34 @@
+{
+    "services": [
+        {
+            "title": "Pneus e Rodas",
+            "image": "/images/services/pneus-e-rodas.jpg",
+            "description": "Os cuidados com os pneus são muito importantes para a segurança do seu carro e conforto, afinal eles são os únicos componentes em contato direto com o solo, e em alguns casos pneus de passeio podem durar mais de 50 mil km."
+        },
+        {
+            "title": "Balanceamento",
+            "image": "/images/services/balanceamento.jpg",
+            "description": "O serviço de balanceamento consiste em equilibrar o peso do conjunto roda+pneu para remover ou evitar a vibração indesejada em altas velocidades, evitando assim o desgaste prematuro de diversos componentes da suspensão e sistema de direção do veículo."
+        },
+        {
+            "title": "Alinhamento 3D",
+            "image": "/images/services/alinhamento.jpg",
+            "description": "Alinhamento é o processo de alinhamento das rodas do veículo, ajustando os ângulos de cada roda para que seu carro tenha um desgaste mínimo dos pneus e os componentes da suspensão tenham a maior durabilidade possível."
+        },
+        {
+            "title": "Troca de Óleo",
+            "image": "/images/services/oleo.jpg",
+            "description": "A troca de óleo é talvez o serviço mais simples e com maior benefício ao funcionamento do motor de qualquer veículo, e para efetuar a manutenção corretamente devemos nos atentar para alguns detalhes descritos no manual do veículo, como o tipo de óleo correto e o tempo para a próxima troca."
+        },
+        {
+            "title": "Sistema de Freio",
+            "image": "/images/services/oleo.jpg",
+            "description": "Desde sua fundação, o objetivo da Dunlop é produzir, constantemente, pneus superiores para melhorar a performance de veículos e a experiência de condução dos motoristas. Hoje, os pneus Dunlop são produzidos em doze fábricas e estão presentes em mais de 100 países, incluindo Estados Unidos, Japão, Indonésia, Tailândia, China, Turquia e Europa."
+        },
+        {
+            "title": "Sistema de Suspensão",
+            "image": "/images/services/oleo.jpg",
+            "description": "A Michelin é uma das líderes mundiais na fabricação e comercialização de pneus, serviços e experiências. São mais de 100 anos de história com inovação. O resultado desse trabalho são produtos e serviços de alta qualidade com ênfase no progresso da mobilidade de pessoas e mercadorias. Você encontra pneus MICHELIN em bicicletas, motocicletas, automóveis, ônibus, caminhões, tratores, aviões e até mesmo em naves espaciais da NASA! Dá pra acreditar? Há também grandes inovações com linhas de produtos licenciados e aclamados, como guias turísticos e gastronômicos."
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+.servicesTitle {
+    background-image: url("/images/background-servicos.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 17.81rem;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    
+    position: relative;
+
+    h1 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        color: var(--white);
+        font-size: 6rem;
+        text-shadow: 0 0 20px black;
+    }
+}
+
+.servicesList {
+    max-width: 1120px;
+    margin: 0 auto;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: 4rem;
+        img {
+            max-width: 26.25rem;
+            border-radius: 12px;
+        }
+        section {
+            h1 {
+                margin-bottom: 1rem;
+            }
+            p {
+                max-width: 36.87rem;
+                font-size: 1.12rem;
+            }
+        }
+        
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+}

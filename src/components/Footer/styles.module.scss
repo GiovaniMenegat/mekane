@@ -1,0 +1,65 @@
+.footerContainer {
+    height: 18.75rem;
+    background: var(--green-800);
+    margin-top: 8rem;
+}
+
+.footerContent {
+    max-width: 1120px;
+    height: 18.75rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    color: var(--white);
+
+    img {
+        max-width: 11.62rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+
+        a {
+
+            & + a {
+                margin-top: 1.5rem;
+            }
+
+            &:hover {
+                color: var(--gray-100);
+            }
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        h4 {
+            font-size: 2rem;
+        }
+        h6 {
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+        a {
+            margin-top: 1rem;
+            & + a {
+                margin-top: 1.5rem;
+            }
+
+            &:hover {
+                color: var(--gray-100);
+            }
+
+            svg {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
