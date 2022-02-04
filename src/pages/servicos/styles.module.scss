@@ -17,7 +17,7 @@
         top: 50%;
         color: var(--white);
         font-size: 6rem;
-        text-shadow: 0 0 20px black;
+        text-shadow: 0 0 1.25rem black;
     }
 }
 
@@ -28,11 +28,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        min-height: 20rem;
 
+        cursor: pointer;
+        
+        padding: 1.25rem;
+        border-radius: 0.75rem;
         margin-top: 4rem;
+
+        transition: 0.2s background;
         img {
             max-width: 26.25rem;
-            border-radius: 12px;
+            border-radius: 0.75rem;
         }
         section {
             h1 {
@@ -47,6 +54,10 @@
 
         &:nth-child(even) {
             flex-direction: row-reverse;
+        }
+
+        &:hover {
+            background: var(--gray-50);
         }
     }
 }

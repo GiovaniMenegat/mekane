@@ -9,7 +9,7 @@ export default function Products() {
     return (
     <>
             <Head>
-                <title>Meridian | Produtos</title>
+                <title>Mekane Pneus | Produtos</title>
 
                 <meta name="description" content="" />
             </Head>

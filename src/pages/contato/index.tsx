@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <>
             <Head>
-                <title>Meridian | Contato</title>
+                <title>Mekane Pneus | Contato</title>
 
                 <meta name="description" content="" />
             </Head>

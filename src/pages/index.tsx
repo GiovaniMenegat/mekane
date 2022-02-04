@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-          <title>Meridian</title>
+          <title>Mekane Pneus</title>
 
           <meta name="description" content="" />
       </Head>

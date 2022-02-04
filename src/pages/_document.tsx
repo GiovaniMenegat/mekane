@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet" />
                     
-                    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+                    <link rel="shortcut icon" href="/mekane-alternativa.png" type="image/png" />
                 </Head>
                 <body>
                     <Main />

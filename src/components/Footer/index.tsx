@@ -1,5 +1,5 @@
 import styles from './styles.module.scss'
-import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import { faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link';
@@ -8,7 +8,7 @@ export function Footer() {
     return (
         <footer className={styles.footerContainer}>
             <div className={styles.footerContent}>
-                <img src="/images/pneu.jpeg" alt="Meridian" />
+                <img src="/images/mekane/mekane-circular.png" alt="Mekane" />
 
                 <nav>
                     <Link href="/servicos">Serviços</Link>
@@ -18,15 +18,20 @@ export function Footer() {
 
                 <div>
                     <h4>Atendimento</h4>
-                    <h6>Seg. a Sex. 8h às 18h</h6>
+                    <h6>Seg. a Sex. 8h às 19h</h6>
+                    <h6>Sáb. 8h às 16h</h6>
 
-                    <a href="tel:5551985219440">
+                    <a href="tel:555133199649">
                         <FontAwesomeIcon icon={faPhoneAlt} />
-                        (51)98521-9440
+                        (51) 3319-9649
                     </a>
-                    <a href="http://https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="mailto:contato@mekanepneus.com.br">
+                        <FontAwesomeIcon icon={faEnvelope} />
+                        contato@mekanepneus.com.br
+                    </a>
+                    <a href="https://www.instagram.com/mekane_pneus" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faInstagram} />
-                        @meridian
+                        @mekane_pneus
                     </a>
                 </div>
             </div>

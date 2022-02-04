@@ -11,7 +11,7 @@ export function Header() {
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
                 <Link href="/">
-                    <img src="/images/logo.svg" alt="Meridian" />
+                    <img src="/images/mekane/mekane-horizontal.png" alt="Mekane" />
                 </Link>
 
                 <nav>
