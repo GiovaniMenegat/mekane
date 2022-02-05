@@ -1,29 +1,25 @@
-import Link from 'next/link';
-import { useRouter } from "next/router";
+import { ActiveLink } from '../ActiveLink';
 import styles from './styles.module.scss'
 
 export function Header() {
-
-    const router = useRouter();
-    
     
     return (
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
-                <Link href="/">
+                <ActiveLink href="/">
                     <img src="/images/mekane/mekane-horizontal.png" alt="Mekane" />
-                </Link>
+                </ActiveLink>
 
                 <nav>
-                    <Link href="/servicos">
-                        <a className={router.pathname == "/servicos" ? styles.active : ""}>Serviços</a>
-                    </Link>
-                    <Link href="/produtos">
-                        <a className={router.pathname == "/produtos" ? styles.active : ""}>Produtos</a>
-                    </Link>
-                    <Link href="/contato">
-                        <a className={router.pathname == "/contato" ? styles.active : ""}>Contato</a>
-                    </Link>
+                    <ActiveLink activeClassName={styles.active} href="/servicos" prefetch>
+                        <a>Serviços</a>
+                    </ActiveLink>
+                    <ActiveLink activeClassName={styles.active} href="/produtos" prefetch>
+                        <a>Produtos</a>
+                    </ActiveLink>
+                    <ActiveLink activeClassName={styles.active} href="/contato" prefetch>
+                        <a>Contato</a>
+                    </ActiveLink>
                 </nav>
             </div>
         </header>

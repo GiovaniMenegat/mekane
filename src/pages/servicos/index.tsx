@@ -5,6 +5,7 @@ import { asText } from '@prismicio/helpers'
 
 import styles from './styles.module.scss'
 import { GetStaticProps } from 'next';
+import Link from 'next/link'
 
 type Service = {
     slug: string;
@@ -32,21 +33,22 @@ export default function Services({ services }: ServicesProps) {
                 </div>
 
                 <div className={styles.servicesList}>
-                    
                     {services.map(service => (
-                        <div key={service.title}>
-                            
-                            <img src={service.image} alt={service.title} />
+                        <Link 
+                            key={service.title}
+                            href={`/servicos/${service.slug}`}
+                        >
+                            <div>
+                                <img src={service.image} alt={service.title} />
 
-                            <section>
-                                <h1>{service.title}</h1>
-                                <p>
-                                    {service.excerpt}
-                                </p>
-                            </section>
-
-
-                        </div>
+                                <section>
+                                    <h1>{service.title}</h1>
+                                    <p>
+                                        {service.excerpt}
+                                    </p>
+                                </section>
+                            </div>
+                        </Link>
                     ))}
                 </div>
                 
