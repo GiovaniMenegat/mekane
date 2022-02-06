@@ -1,12 +1,18 @@
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Image from 'next/image';
-import banner1 from '../../../public/images/banners/1.jpg'
-import banner2 from '../../../public/images/banners/2.jpg'
 
 import styles from './styles.module.scss'
 
-export function Carousel() {
+type Images = {
+    slug: string;
+    image: string;
+}
+
+interface ImagesProps {
+    images: Images[]
+}
+
+export function Carousel({ images }: ImagesProps) {
     return (
         <section>
             <Swiper
@@ -18,20 +24,18 @@ export function Carousel() {
                     "disableOnInteraction": false
                 }}
                 loop
+                autoHeight
                 pagination={{ clickable: true }}
             >
-                <SwiperSlide>
-                    <Image 
-                        src={banner1}
-                        alt=""
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image 
-                        src={banner2}
-                        alt=""
-                    />
-                </SwiperSlide>
+                {images.map(image => 
+                    <SwiperSlide key={image.image}>
+                        <img
+                            src={image.image}
+                            alt={image.slug}
+                        />
+                    </SwiperSlide>
+                )}
+
             </Swiper>
         </section>
     )

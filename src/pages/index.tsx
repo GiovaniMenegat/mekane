@@ -2,10 +2,20 @@ import Head from 'next/head'
 import { Carousel } from '../components/Carousel'
 import styles from './home.module.scss'
 import brands from '../../mock/brands.json'
-import Image from 'next/image'
-import pneu from '../../public/images/pneu.jpeg'
+import { GetServerSideProps, GetStaticProps } from 'next'
+import Prismic from '@prismicio/client'
+import Client from '../../utils/prismicHelpers'
 
-export default function Home() {
+type Image = {
+  slug: string;
+  image: string;
+}
+
+interface ImagesProps {
+  images: Image[]
+}
+
+export default function Home({ images }: ImagesProps) {
   return (
     <>
       <Head>
@@ -22,15 +32,15 @@ export default function Home() {
           <meta property="og:type" content="website" />
       </Head>
       <main>
-        <Carousel />
+        <Carousel images={images} />
 
         <section className={styles.homeText}>
           <p>
             Mekane é uma loja de peças e serviços automotivos de Porto Alegre. 
           </p>
 
-          <Image 
-            src={pneu} 
+          <img 
+            src="/images/pneu.jpeg"
             alt="Pneu" 
           />
         </section>
@@ -47,4 +57,27 @@ export default function Home() {
       </main>
     </>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const post = await Client().query([
+    Prismic.Predicates.at('document.type', 'banner')
+  ], {
+    fetch: ['banner.image'],
+    pageSize: 100,
+  });
+
+  const images = post.results.map(image => {
+    return {
+      slug: image.uid,
+      image: image.data.image.url,
+    }
+  })
+
+  return {
+    props: {
+      images
+    }
+  }
+
 }
