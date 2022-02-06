@@ -61,3 +61,26 @@
         }
     }
 }
+
+@media screen and (max-width: 991px) {
+    .servicesList {
+        padding: 0 2rem;
+        div {
+            flex-direction: column;
+
+            img {
+                max-width: 23.25rem;
+            }
+            
+            section {
+                h1 {
+                    margin: 1rem 0;
+                }
+            }
+
+            &:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+    }
+}

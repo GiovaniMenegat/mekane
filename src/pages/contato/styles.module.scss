@@ -70,3 +70,9 @@
         margin: 0 auto;
     }
 }
+
+@media screen and (max-width: 991px) {
+    .contactForm {
+        padding: 0 2rem;
+    }
+}

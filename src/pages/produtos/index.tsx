@@ -4,8 +4,6 @@ import styles from './styles.module.scss'
 import brands from '../../../mock/brands.json'
 
 export default function Products() {
-    console.log(brands);
-
     return (
     <>
             <Head>

@@ -59,3 +59,21 @@
 
     
 }
+
+@media screen and (max-width: 991px) {
+    .productsList {
+        padding: 0 2rem;
+
+        div {
+            flex-direction: column;
+
+            img {
+                max-width: 90%;
+            }
+
+            p {
+                margin: 1rem 0 0;
+            }
+        }
+    }
+}

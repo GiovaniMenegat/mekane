@@ -60,3 +60,22 @@
         }
     }
 }
+
+@media screen and (max-width: 991px) {
+    .footerContainer {
+        height: auto;
+    }
+    .footerContent {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 2rem 7rem;
+
+        nav {
+            margin: 3rem 0;
+        }
+
+        div {
+            text-align: center;
+        }
+    }
+}
