@@ -14,6 +14,10 @@ type Service = {
     excerpt: string;
 }
 
+interface ServiceApi {
+    results: any;
+}
+
 interface ServicesProps {
     services: Service[]
 }
@@ -66,7 +70,7 @@ export default function Services({ services }: ServicesProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const post = await Client().query([
+    const post: ServiceApi = await Client().query([
         Prismic.Predicates.at('document.type', 'service')
     ], {
         fetch: ['service.title', 'service.content', 'service.image'],
@@ -81,7 +85,7 @@ export const getStaticProps: GetStaticProps = async () => {
             excerpt: service.data.content.find(content => content.type === 'paragraph').text ?? '',
         }
     })
-    
+
     return {
         props: {
             services

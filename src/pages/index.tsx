@@ -11,6 +11,10 @@ type Image = {
   image: string;
 }
 
+interface ImagesApi {
+  results: any;
+}
+
 interface ImagesProps {
   images: Image[]
 }
@@ -60,7 +64,7 @@ export default function Home({ images }: ImagesProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const post = await Client().query([
+  const post: ImagesApi = await Client().query([
     Prismic.Predicates.at('document.type', 'banner')
   ], {
     fetch: ['banner.image'],

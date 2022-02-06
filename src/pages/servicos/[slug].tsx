@@ -13,6 +13,10 @@ interface ServiceProps {
     }
 }
 
+interface ServiceApi {
+    data: any;
+}
+
 export default function Service({ service }: ServiceProps) {
     return (
         <>
@@ -39,7 +43,7 @@ export default function Service({ service }: ServiceProps) {
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     const { slug } = params;
 
-    const document = await Client().getByUID('service', String(slug), {});
+    const document: ServiceApi = await Client().getByUID('service', String(slug), {});
 
     const service = {
         slug,

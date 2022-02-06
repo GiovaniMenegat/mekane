@@ -38,7 +38,7 @@ export default function Contact() {
                     <input type="text" id="phone" />
 
                     <label htmlFor="message"></label>
-                    <textarea id="message" cols="30" rows="10"></textarea>
+                    <textarea id="message" cols={30} rows={10}></textarea>
 
                     <button type="submit">
                         Enviar
@@ -47,7 +47,7 @@ export default function Contact() {
                 </form>
 
                 <div className={styles.contactMap}>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1452.1632443016622!2d-51.15120620839123!3d-30.04128357649463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977eb7cd52019%3A0x9d221acfd6c3a498!2sCrestani%20Pneus%20e%20Rodas%20Prot%C3%A1sio!5e0!3m2!1spt-BR!2sbr!4v1641583738871!5m2!1spt-BR!2sbr" width="90%" height="450" allowFullScreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1452.1632443016622!2d-51.15120620839123!3d-30.04128357649463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951977eb7cd52019%3A0x9d221acfd6c3a498!2sCrestani%20Pneus%20e%20Rodas%20Prot%C3%A1sio!5e0!3m2!1spt-BR!2sbr!4v1641583738871!5m2!1spt-BR!2sbr" width="90%" height="450" allowFullScreen loading="lazy"></iframe>
                 </div>
 
             </main>
