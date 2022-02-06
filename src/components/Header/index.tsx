@@ -9,7 +9,10 @@ export function Header() {
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
                 <ActiveLink href="/">
-                    <img src="/images/mekane/mekane-horizontal.png" alt="Mekane" />
+                    <img 
+                        src="/images/mekane/mekane-horizontal.png" 
+                        alt="Mekane" 
+                    />
                 </ActiveLink>
 
                 <BurgerMenu />

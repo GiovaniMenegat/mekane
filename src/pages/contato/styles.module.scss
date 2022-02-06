@@ -72,6 +72,11 @@
 }
 
 @media screen and (max-width: 991px) {
+    .contactTitle {
+        h1 {
+            font-size: 5rem;
+        }
+    }
     .contactForm {
         padding: 0 2rem;
     }

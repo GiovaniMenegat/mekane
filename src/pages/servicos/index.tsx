@@ -24,7 +24,15 @@ export default function Services({ services }: ServicesProps) {
             <Head>
                 <title>Mekane Pneus | Serviços</title>
 
-                <meta name="description" content="" />
+                <meta property="og:title" content="Mekane Pneus | Serviços | Porto Alegre - RS" />
+                <meta name="description" content="A melhor autocenter de Porto Alegre. Trabalhamos com serviços gerais, como troca de óleo, troca de pneus, geometria, balanceamento entre outros. Venha conhecer!" />
+
+                <meta property="og:description" content="A melhor autocenter de Porto Alegre. Trabalhamos com serviços gerais, como troca de óleo, troca de pneus, geometria, balanceamento entre outros. Venha conhecer!" />
+
+                <link rel="canonical" href="https://www.mekanepneus.com.br/servicos" />
+                <meta property="og:url" content="https://www.mekanepneus.com.br/servicos" />
+                <meta property="og:site_name" content="mekanepneus" />
+                <meta property="og:type" content="website" />
             </Head>
             <main>
 
@@ -42,7 +50,7 @@ export default function Services({ services }: ServicesProps) {
                                 <img src={service.image} alt={service.title} />
 
                                 <section>
-                                    <h1>{service.title}</h1>
+                                    <h2>{service.title}</h2>
                                     <p>
                                         {service.excerpt}
                                     </p>

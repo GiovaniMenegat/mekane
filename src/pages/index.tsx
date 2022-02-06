@@ -1,9 +1,9 @@
 import Head from 'next/head'
-
 import { Carousel } from '../components/Carousel'
-
 import styles from './home.module.scss'
 import brands from '../../mock/brands.json'
+import Image from 'next/image'
+import pneu from '../../public/images/pneu.jpeg'
 
 export default function Home() {
   return (
@@ -11,7 +11,15 @@ export default function Home() {
       <Head>
           <title>Mekane Pneus</title>
 
-          <meta name="description" content="" />
+          <meta property="og:title" content="Mekane Pneus | Porto Alegre - RS" />
+          <meta name="description" content="A melhor autocenter de Porto Alegre. Trabalhamos com serviços gerais, como troca de óleo, troca de pneus, geometria, balanceamento entre outros. Venha conhecer!" />
+          
+          <meta property="og:description" content="A melhor autocenter de Porto Alegre. Trabalhamos com serviços gerais, como troca de óleo, troca de pneus, geometria, balanceamento entre outros. Venha conhecer!" />
+
+          <link rel="canonical" href="https://www.mekanepneus.com.br" />
+          <meta property="og:url" content="https://www.mekanepneus.com.br" />
+          <meta property="og:site_name" content="mekanepneus" />
+          <meta property="og:type" content="website" />
       </Head>
       <main>
         <Carousel />
@@ -21,7 +29,10 @@ export default function Home() {
             Mekane é uma loja de peças e serviços automotivos de Porto Alegre. 
           </p>
 
-          <img src="/images/pneu.jpeg" alt="Pneu" />
+          <Image 
+            src={pneu} 
+            alt="Pneu" 
+          />
         </section>
 
         <section className={styles.homeBrands}>

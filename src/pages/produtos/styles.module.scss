@@ -61,6 +61,11 @@
 }
 
 @media screen and (max-width: 991px) {
+    .productsTitle {
+        h1 {
+            font-size: 5rem;
+        }
+    }
     .productsList {
         padding: 0 2rem;
 

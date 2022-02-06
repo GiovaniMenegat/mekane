@@ -42,7 +42,7 @@
             border-radius: 0.75rem;
         }
         section {
-            h1 {
+            h2 {
                 margin-bottom: 1rem;
             }
             p {
@@ -63,6 +63,11 @@
 }
 
 @media screen and (max-width: 991px) {
+    .servicesTitle {
+        h1 {
+            font-size: 5rem;
+        }
+    }
     .servicesList {
         padding: 0 2rem;
         div {
@@ -73,7 +78,7 @@
             }
             
             section {
-                h1 {
+                h2 {
                     margin: 1rem 0;
                 }
             }

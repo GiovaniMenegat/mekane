@@ -1,5 +1,8 @@
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
+import banner1 from '../../../public/images/banners/1.jpg'
+import banner2 from '../../../public/images/banners/2.jpg'
 
 import styles from './styles.module.scss'
 
@@ -16,14 +19,18 @@ export function Carousel() {
                 }}
                 loop
                 pagination={{ clickable: true }}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
             >
                 <SwiperSlide>
-                    <img src="/images/banners/1.jpg" alt="" />
+                    <Image 
+                        src={banner1}
+                        alt=""
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="/images/banners/2.jpg" alt="" />
+                    <Image 
+                        src={banner2}
+                        alt=""
+                    />
                 </SwiperSlide>
             </Swiper>
         </section>

@@ -8,7 +8,10 @@ export function Footer() {
     return (
         <footer className={styles.footerContainer}>
             <div className={styles.footerContent}>
-                <img src="/images/mekane/mekane-circular.png" alt="Mekane" />
+                <img 
+                    src="/images/mekane/mekane-circular.png" 
+                    alt="Mekane" 
+                />
 
                 <nav>
                     <Link href="/servicos">Serviços</Link>
@@ -17,9 +20,11 @@ export function Footer() {
                 </nav>
 
                 <div>
-                    <h4>Atendimento</h4>
-                    <h6>Seg. a Sex. 8h às 19h</h6>
-                    <h6>Sáb. 8h às 16h</h6>
+                    <h2>Atendimento</h2>
+                    <h3>
+                        Seg. a Sex. 8h às 19h <br />
+                        Sáb. 8h às 16h
+                    </h3>
 
                     <a href="tel:555133199649">
                         <FontAwesomeIcon icon={faPhoneAlt} />
