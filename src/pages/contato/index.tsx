@@ -1,8 +1,63 @@
 import Head from 'next/head'
+import emailjs from '@emailjs/browser';
+import InputMask from "react-input-mask";
+import * as yup from 'yup';
 
 import styles from './styles.module.scss'
+import { useRef, useState } from 'react';
 
 export default function Contact() {
+    const [loading, setLoading] = useState(false);
+    const [formError, setFormError] = useState(false);
+    const [nameError, setNameError] = useState(false);
+    const [emailError, setEmailError] = useState(false);
+    const [emailInvalidError, setEmailInvalidError] = useState(false);
+    const [phoneError, setPhoneError] = useState(false);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+
+    const form = useRef();
+
+    const contactSchema = yup.object().shape({
+        name: yup.string().required(() => setNameError(true)),
+        email: yup
+            .string()
+            .email(() => setEmailInvalidError(true))
+            .required(() => setEmailError(true)),
+        phone: yup.string().required(() => setPhoneError(true))
+    });
+
+    const sendEmail = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+
+        const contactForm = {
+            name: name,
+            email: email,
+            phone: phone           
+        }
+        const isValid = await contactSchema.isValid(contactForm);
+
+        if (isValid) {
+            setNameError(false);
+            setEmailInvalidError(false);
+            setEmailError(false);
+            setPhoneError(false);
+            setFormError(false);
+
+            emailjs.sendForm(process.env.EMAILJS_CONTACT, process.env.EMAILJS_TEMPLATE, form.current, process.env.EMAILJS_TOKEN)
+                .then((result) => {
+                    setLoading(false);
+                }, (error) => {
+                    setLoading(false);
+                });
+        } else {
+            setLoading(false);
+            setFormError(true);
+        }
+    };
+
     return (
         <>
             <Head>
@@ -24,24 +79,66 @@ export default function Contact() {
                     <h1>Contato</h1>
                 </div>
 
-                <form action="" className={styles.contactForm}>
+                <form ref={form} onSubmit={sendEmail} className={styles.contactForm}>
 
                     <h1>Entre em contato!</h1>
                     
                     <label htmlFor="name">Nome</label>
-                    <input type="text" id="name" />
+                    <input 
+                        type="text" 
+                        name="user_name"
+                        className={nameError ? styles.borderError : ''}
+                        onChange={e => setName(e.target.value)}
+                    />
+                    {nameError ?
+                        <p>O nome é obrigatório.</p> :
+                        null
+                    }
 
                     <label htmlFor="email">E-mail</label>
-                    <input type="text" id="email" />
+                    <input 
+                        type="text" 
+                        name="user_email"
+                        className={emailInvalidError || emailError ? styles.borderError : ''}
+                        onChange={e => setEmail(e.target.value)}
+                    />
+                    {emailInvalidError ?
+                        <p>Por favor, digite um e-mail válido.</p> :
+                        null
+                    }
+                    {emailError ?
+                        <p>O e-mail é obrigatório.</p> :
+                        null
+                    }
 
                     <label htmlFor="phone">Telefone</label>
-                    <input type="text" id="phone" />
+                    <InputMask 
+                        mask="(99) 99999-9999"
+                        type="text" 
+                        name="user_phone"
+                        className={phoneError ? styles.borderError : ''}
+                        onChange={e => setPhone(e.target.value)}
+                    />
+                    {phoneError ?
+                        <p>O telefone é obrigatório.</p> :
+                        null
+                    }
 
                     <label htmlFor="message"></label>
-                    <textarea id="message" cols={30} rows={10}></textarea>
+                    <textarea name="user_message" cols={30} rows={10}></textarea>
 
-                    <button type="submit">
-                        Enviar
+                    {formError ?
+                        <p>Por favor, revise os campos.</p> :
+                        null
+                    }
+
+                    <button 
+                        type="submit" 
+                        value="Send"
+                        className={loading ? styles.buttonDisabled : ''}
+                        disabled={loading}
+                    >
+                        {loading ? 'Aguarde...' : 'Enviar'}
                     </button>
 
                 </form>

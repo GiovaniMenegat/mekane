@@ -47,6 +47,12 @@
         }
     }
 
+    p {
+        color: var(--error);
+        margin-top: 0.625rem;
+        font-size: 0.875rem;
+    }
+
     button {
         margin-top: 2rem;
         padding: 1rem;
@@ -62,6 +68,18 @@
         }
     }
     
+}
+
+.borderError {
+    border: 1px solid var(--error) !important;
+}
+
+.buttonDisabled {
+    pointer-events: none;
+
+    &:hover {
+        background: #e1e1e1;
+    }
 }
 
 .contactMap {
