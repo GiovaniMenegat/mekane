@@ -14,43 +14,45 @@ export function BurgerMenu() {
                     <FontAwesomeIcon icon={faTimes} /> :
                     <FontAwesomeIcon icon={faBars} />
                 }
+
+                {active ?
+                    <section>
+                        <ActiveLink
+                            activeClassName={styles.active}
+                            href="/servicos"
+                        >
+                            <a
+                                onClick={() => setActive(!active)}
+                            >
+                                Serviços
+                            </a>
+                        </ActiveLink>
+                        <ActiveLink
+                            activeClassName={styles.active}
+                            href="/produtos"
+                        >
+                            <a
+                                onClick={() => setActive(!active)}
+                            >
+                                Produtos
+                            </a>
+                        </ActiveLink>
+                        <ActiveLink
+                            activeClassName={styles.active}
+                            href="/contato"
+                        >
+                            <a
+                                onClick={() => setActive(!active)}
+                            >
+                                Contato
+                            </a>
+                        </ActiveLink>
+                    </section> :
+                    null
+                }
             </div>
 
-            {active ?
-                <nav>
-                    <ActiveLink 
-                        activeClassName={styles.active} 
-                        href="/servicos"
-                    >
-                        <a
-                            onClick={() => setActive(!active)}
-                        >
-                            Serviços
-                        </a>
-                    </ActiveLink>
-                    <ActiveLink 
-                        activeClassName={styles.active} 
-                        href="/produtos"
-                    >
-                        <a
-                            onClick={() => setActive(!active)}
-                        >
-                            Produtos
-                        </a>
-                    </ActiveLink>
-                    <ActiveLink 
-                        activeClassName={styles.active} 
-                        href="/contato"
-                    >
-                        <a
-                            onClick={() => setActive(!active)}
-                        >
-                            Contato
-                        </a>
-                    </ActiveLink>
-                </nav> :
-                null
-            }
+            
             
         </div>
     );

@@ -9,7 +9,7 @@
         }
     }
     
-    nav {
+    section {
         background: var(--green-800);
         margin: 0;
         z-index: 2;
@@ -19,9 +19,11 @@
         flex-direction: column;
         align-items: center;
         width: 10.375rem;
+        box-shadow: 0px 8px 10px 1px black;
 
         a {
             margin: 1rem 0;
+            height: 3rem;
             margin-left: 0 !important;
             text-align: center;
             width: 80%;
