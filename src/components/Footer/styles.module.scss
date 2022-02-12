@@ -43,7 +43,7 @@
         h4 {
             font-size: 2rem;
         }
-        h6 {
+        h3 {
             margin-top: 0.5rem;
             font-size: 1.1rem;
         }
@@ -59,6 +59,25 @@
             }
         }
     }
+}
+
+.address {
+    font-weight: 700;
+    color: var(--yellow-100);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footerCnpj {
+    background: var(--green-900);
+    padding: 0.5rem;
+
+    p {
+        color: var(--white);
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
 }
 
 @media screen and (max-width: 991px) {

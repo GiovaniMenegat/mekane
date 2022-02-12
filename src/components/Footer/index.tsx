@@ -20,7 +20,17 @@ export function Footer() {
                 </nav>
 
                 <div>
-                    <h2>Atendimento</h2>
+                    <h2>Nossa loja</h2>
+
+                    <a 
+                        href="https://goo.gl/maps/rtWoiHquWbXSrQGR8" 
+                        className={styles.address}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        Av Protásio Alves, 6180 - Alto Petrópolis
+                    </a>
+
                     <h3>
                         Seg. a Sex. 8h às 19h <br />
                         Sáb. 8h às 16h
@@ -39,6 +49,9 @@ export function Footer() {
                         @mekane_pneus
                     </a>
                 </div>
+            </div>
+            <div className={styles.footerCnpj}>
+                <p>44.770.801/0001-01</p>
             </div>
         </footer>
     );

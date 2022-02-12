@@ -40,7 +40,7 @@ export default function Home({ images }: ImagesProps) {
 
         <section className={styles.homeText}>
           <p>
-            Mekane é uma loja de peças e serviços automotivos de Porto Alegre. 
+            Mekane é uma empresa de comércio de pneus e rodas, serviços de manutenção em freios, suspensões e troca de óleo.
           </p>
 
           <img 
