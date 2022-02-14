@@ -8,6 +8,7 @@ import { useRef, useState } from 'react';
 
 export default function Contact() {
     const [loading, setLoading] = useState(false);
+    const [formSuccess, setFormSuccess] = useState(false);
     const [formError, setFormError] = useState(false);
     const [nameError, setNameError] = useState(false);
     const [emailError, setEmailError] = useState(false);
@@ -49,8 +50,10 @@ export default function Contact() {
             emailjs.sendForm(process.env.EMAILJS_CONTACT, process.env.EMAILJS_TEMPLATE, form.current, process.env.EMAILJS_TOKEN)
                 .then((result) => {
                     setLoading(false);
+                    setFormSuccess(true);
                 }, (error) => {
                     setLoading(false);
+                    setFormError(true);
                 });
         } else {
             setLoading(false);
@@ -90,9 +93,8 @@ export default function Contact() {
                         className={nameError ? styles.borderError : ''}
                         onChange={e => setName(e.target.value)}
                     />
-                    {nameError ?
-                        <p>O nome é obrigatório.</p> :
-                        null
+                    {nameError &&
+                        <p className={styles.formError}>O nome é obrigatório.</p>
                     }
 
                     <label htmlFor="email">E-mail</label>
@@ -102,13 +104,11 @@ export default function Contact() {
                         className={emailInvalidError || emailError ? styles.borderError : ''}
                         onChange={e => setEmail(e.target.value)}
                     />
-                    {emailInvalidError ?
-                        <p>Por favor, digite um e-mail válido.</p> :
-                        null
+                    {emailInvalidError &&
+                        <p className={styles.formError}>Por favor, digite um e-mail válido.</p> 
                     }
-                    {emailError ?
-                        <p>O e-mail é obrigatório.</p> :
-                        null
+                    {emailError &&
+                        <p className={styles.formError}>O e-mail é obrigatório.</p>
                     }
 
                     <label htmlFor="phone">Telefone</label>
@@ -119,17 +119,15 @@ export default function Contact() {
                         className={phoneError ? styles.borderError : ''}
                         onChange={e => setPhone(e.target.value)}
                     />
-                    {phoneError ?
-                        <p>O telefone é obrigatório.</p> :
-                        null
+                    {phoneError &&
+                        <p className={styles.formError}>O telefone é obrigatório.</p>
                     }
 
                     <label htmlFor="message"></label>
                     <textarea name="user_message" cols={30} rows={10}></textarea>
 
-                    {formError ?
-                        <p>Por favor, revise os campos.</p> :
-                        null
+                    {formError &&
+                        <p className={styles.formError}>Por favor, revise os campos.</p>
                     }
 
                     <button 
@@ -140,6 +138,14 @@ export default function Contact() {
                     >
                         {loading ? 'Aguarde...' : 'Enviar'}
                     </button>
+
+                    {formSuccess &&
+                        <p 
+                            className={styles.formSuccess}
+                        >
+                            Contato enviado!
+                        </p>
+                    }
 
                 </form>
 
