@@ -6,6 +6,7 @@ module.exports = {
     PRISMIC_TOKEN: process.env.PRISMIC_TOKEN,
     EMAILJS_CONTACT: process.env.EMAILJS_CONTACT,
     EMAILJS_TEMPLATE: process.env.EMAILJS_TEMPLATE,
-    EMAILJS_TOKEN: process.env.EMAILJS_TOKEN
+    EMAILJS_TOKEN: process.env.EMAILJS_TOKEN,
+    GTM_ID: process.env.GTM_ID
   }
 }
