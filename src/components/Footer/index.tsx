@@ -36,9 +36,9 @@ export function Footer() {
                         Sáb. 8h às 16h
                     </h3>
 
-                    <a href="tel:555133199649">
+                    <a href="tel:555130699836">
                         <FontAwesomeIcon icon={faPhoneAlt} />
-                        (51) 3319-9649
+                        (51) 3069-9836
                     </a>
                     <a href="mailto:contato@mekanepneus.com.br">
                         <FontAwesomeIcon icon={faEnvelope} />
